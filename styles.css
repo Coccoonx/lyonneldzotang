@@ -684,7 +684,48 @@ img {
   color: var(--primary);
 }
 
-/* --- Scrollbar --- */
+/* --- Certification card variant --- */
+.skill-category--cert {
+  border-color: rgba(255, 185, 0, 0.3);
+}
+
+.skill-category--cert:hover {
+  border-color: #FFB900;
+  box-shadow: 0 8px 30px rgba(255, 185, 0, 0.15);
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.cert-badge {
+  font-size: 1.4rem;
+  min-width: 2rem;
+  text-align: center;
+  color: #FFB900;
+}
+
+.cert-item strong {
+  font-size: 0.9rem;
+  display: block;
+}
+
+.cert-item small {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
 ::-webkit-scrollbar {
   width: 6px;
 }
