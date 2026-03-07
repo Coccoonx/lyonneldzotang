@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio technique de Lyonnel Dzotang Tchassen — Senior Software Engineer à Douala, spécialisé Java, Spring Boot, REST APIs, et développement Full-Stack." />
+  <meta name="author" content="Lyonnel Dzotang Tchassen" />
+  <title>Lyonnel Dzotang Tchassen — Portfolio</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">LDT<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
+          <!-- moon icon (shown in dark mode) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <!-- sun icon (shown in light mode) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+    <a href="#about" class="mobile-link">À propos</a>
+    <a href="#skills" class="mobile-link">Compétences</a>
+    <a href="#projects" class="mobile-link">Projets</a>
+    <a href="#contact" class="mobile-cta">Contact</a>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">Senior Software Engineer · Douala, Cameroun 🇨🇲</div>
+          <h1 class="hero-title">
+            Lyonnel<br />
+            <span class="highlight">Dzotang</span> Tchassen
+          </h1>
+          <p class="hero-subtitle">Senior Software Engineer @ GUCE GIE · Oracle Certified Java</p>
+          <p class="hero-description">
+            Ingénieur logiciel senior passionné par la conception d'architectures robustes et
+            scalables. Spécialisé dans l'écosystème Java / Spring Boot, la sécurisation des
+            APIs REST et la transformation digitale des systèmes d'information.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Voir mes projets
+            </a>
+            <a href="https://github.com/Coccoonx" target="_blank" rel="noopener" class="btn btn-outline">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> GitHub
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Années d'expérience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Projets réalisés</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">🏅</span>
+              <span class="stat-label">Oracle Certified Java</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-avatar" aria-hidden="true">👨‍💻</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-text">
+          <h2 class="section-title">À propos <span>de moi</span></h2>
+          <p class="section-subtitle">Senior Software Engineer · GUCE GIE, Douala</p>
+          <p>
+            Je suis Lyonnel Dzotang Tchassen, ingénieur logiciel senior basé à Douala, Cameroun.
+            Diplômé de l'<strong>Université de Dschang</strong> et certifié
+            <strong>Oracle Certified Associate Java SE 7 Programmer</strong>, j'ai acquis plus de
+            10 ans d'expérience dans la conception et le développement de systèmes d'information
+            à fort enjeu.
+          </p>
+          <p>
+            Actuellement Senior Software Engineer au <strong>GUCE GIE</strong> (Guichet Unique des
+            Opérations du Commerce Extérieur), je contribue à la transformation digitale des
+            procédures de commerce extérieur au Cameroun : dématérialisation des formalités
+            douanières, intégration des acteurs institutionnels et amélioration de la performance
+            des systèmes d'information portuaires.
+          </p>
+          <p>
+            Mon cœur de métier : l'écosystème Java & Spring Boot, la conception d'APIs REST
+            sécurisées, et la modélisation de données relationnelles. Je partage également ma
+            veille technologique sur
+            <a href="https://medium.com/@dtlyonnel" target="_blank" rel="noopener">Medium</a>.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <span class="highlight-icon">⚙️</span>
+            <div>
+              <h4>Architecture Backend</h4>
+              <p>Conception d'APIs REST sécurisées avec Spring Boot, JWT, et bonnes pratiques de sécurité</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">🗄️</span>
+            <div>
+              <h4>Bases de données</h4>
+              <p>Expertise JPA/Hibernate, PostgreSQL, H2 — modélisation et optimisation des données</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">🌐</span>
+            <div>
+              <h4>Développement Full-Stack</h4>
+              <p>De Java Spring Boot côté serveur à AngularJS/Node.js côté client</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">📱</span>
+            <div>
+              <h4>Développement Mobile</h4>
+              <p>Expérience en développement d'applications Android natives avec Java</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title">Compétences <span>techniques</span></h2>
+      <p class="section-subtitle">Technologies et outils utilisés dans mes projets</p>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">☕</span>
+            <span class="skill-cat-title">Java & JVM</span>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Java 8+</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Spring MVC</span>
+            <span class="tag">Spring Data JPA</span>
+            <span class="tag">Spring Security</span>
+            <span class="tag">Hibernate</span>
+            <span class="tag">Lombok</span>
+            <span class="tag">MapStruct</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🔌</span>
+            <span class="skill-cat-title">APIs & Services</span>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">REST API</span>
+            <span class="tag">Spring Data REST</span>
+            <span class="tag">JWT</span>
+            <span class="tag">OAuth2</span>
+            <span class="tag">Thymeleaf</span>
+            <span class="tag">REST-Assured</span>
+            <span class="tag">Postman</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🗄️</span>
+            <span class="skill-cat-title">Bases de données</span>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">H2</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">JPA / ORM</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🌐</span>
+            <span class="skill-cat-title">Frontend & Web</span>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">AngularJS</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Grunt</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🔨</span>
+            <span class="skill-cat-title">Build & Outils</span>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Maven</span>
+            <span class="tag">Gradle</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">JUnit</span>
+            <span class="tag">Travis CI</span>
+            <span class="tag">IntelliJ IDEA</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">📱</span>
+            <span class="skill-cat-title">Mobile & Autres</span>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Android</span>
+            <span class="tag">Java Android SDK</span>
+            <span class="tag">Architecture logicielle</span>
+            <span class="tag">Tests unitaires</span>
+            <span class="tag">Sécurité applicative</span>
+          </div>
+        </div>
+
+        <div class="skill-category skill-category--cert">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🎓</span>
+            <span class="skill-cat-title">Formation & Certification</span>
+          </div>
+          <div class="cert-list">
+            <div class="cert-item">
+              <span class="cert-badge">☕</span>
+              <div>
+                <strong>Oracle Certified Associate</strong><br />
+                <small>Java SE 7 Programmer · Oracle</small>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="cert-badge">🎓</span>
+              <div>
+                <strong>Université de Dschang</strong><br />
+                <small>Informatique · Cameroun</small>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="section" id="projects" style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <h2 class="section-title">Mes <span>projets</span></h2>
+      <p class="section-subtitle">Une sélection de projets développés au fil des années</p>
+      <div class="projects-grid">
+
+        <!-- Vending Machine -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🏧</span>
+            <div class="project-links">
+              <a href="https://github.com/Coccoonx/vending-machine" target="_blank" rel="noopener" class="project-link" title="Voir sur GitHub">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Vending Machine API</h3>
+          <p class="project-year">📅 2022</p>
+          <p class="project-description">
+            API REST complète simulant une machine distributrice. Gestion des rôles vendeur/acheteur,
+            dépôt de pièces, achat de produits avec rendu de monnaie, et authentification JWT.
+            Inclut la gestion de sessions simultanées et la sécurité applicative.
+          </p>
+          <div class="project-tech">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot 2.6</span>
+            <span class="tag">Spring Security</span>
+            <span class="tag">JWT</span>
+            <span class="tag">JPA</span>
+            <span class="tag">H2</span>
+            <span class="tag">REST API</span>
+            <span class="tag">Maven</span>
+          </div>
+        </div>
+
+        <!-- QG-Gochiver -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">☁️</span>
+            <div class="project-links">
+              <a href="https://github.com/Coccoonx/qg-gochiver" target="_blank" rel="noopener" class="project-link" title="Voir sur GitHub">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">QG-Gochiver</h3>
+          <p class="project-year">📅 2017</p>
+          <p class="project-description">
+            Application cloud Spring Boot avec interface Thymeleaf et sécurité Spring Security.
+            Persistance des données avec Spring Data JPA sur PostgreSQL, avec profils de
+            configuration pour les environnements local et production.
+          </p>
+          <div class="project-tech">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Thymeleaf</span>
+            <span class="tag">Spring Security</span>
+            <span class="tag">JPA</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Maven</span>
+          </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">📊</span>
+            <div class="project-links">
+              <a href="https://github.com/Coccoonx/dashboard" target="_blank" rel="noopener" class="project-link" title="Voir sur GitHub">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Dashboard Full-Stack</h3>
+          <p class="project-year">📅 2015 – 2017</p>
+          <p class="project-description">
+            Application web full-stack avec frontend AngularJS et backend Node.js/Express.
+            Gestion des sessions utilisateurs avec MongoDB, authentification Stormpath,
+            pipeline de build Grunt complet avec tests Karma/Jasmine et Protractor.
+          </p>
+          <div class="project-tech">
+            <span class="tag">AngularJS</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Grunt</span>
+            <span class="tag">Karma</span>
+            <span class="tag">Travis CI</span>
+          </div>
+        </div>
+
+        <!-- Gefi -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">💰</span>
+            <div class="project-links">
+              <a href="https://github.com/Coccoonx/gefi" target="_blank" rel="noopener" class="project-link" title="Voir sur GitHub">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Gefi — Gestion Financière</h3>
+          <p class="project-year">📅 2016 – 2018</p>
+          <p class="project-description">
+            Application de gestion financière développée avec Spring Boot et Spring Data REST.
+            Architecture en couches avec accès aux données via JPA/Hibernate sur PostgreSQL.
+            Utilisation de Lombok pour réduire le code boilerplate.
+          </p>
+          <div class="project-tech">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Spring Data REST</span>
+            <span class="tag">JPA/Hibernate</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Lombok</span>
+            <span class="tag">Maven</span>
+          </div>
+        </div>
+
+        <!-- Relieferd -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">📱</span>
+            <div class="project-links">
+              <a href="https://github.com/Coccoonx/relieferd" target="_blank" rel="noopener" class="project-link" title="Voir sur GitHub">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Relieferd — Application Android</h3>
+          <p class="project-year">📅 2015 – 2016</p>
+          <p class="project-description">
+            Application Android native développée en Java avec Gradle. Architecture orientée
+            composants avec des modules bien séparés. Projet collaboratif utilisant les outils
+            modernes de développement Android de l'époque.
+          </p>
+          <div class="project-tech">
+            <span class="tag">Android</span>
+            <span class="tag">Java</span>
+            <span class="tag">Gradle</span>
+            <span class="tag">Android SDK</span>
+          </div>
+        </div>
+
+        <!-- Cassnaks / Snacks série -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🍬</span>
+            <div class="project-links">
+              <a href="https://github.com/Coccoonx/cassnaks" target="_blank" rel="noopener" class="project-link" title="Voir sur GitHub">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Série Snacks — Projets Java</h3>
+          <p class="project-year">📅 2016</p>
+          <p class="project-description">
+            Ensemble de projets Java (cassnaks, snacks, backsnack) explorant des concepts
+            de programmation orientée objet, de structures de données et d'algorithmes.
+            Ces projets constituent les fondations de mon expertise Java.
+          </p>
+          <div class="project-tech">
+            <span class="tag">Java</span>
+            <span class="tag">POO</span>
+            <span class="tag">Algorithmes</span>
+            <span class="tag">Maven</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-info">
+          <h2 class="section-title">Me <span>contacter</span></h2>
+          <p class="section-subtitle">Travaillons ensemble !</p>
+          <p>
+            Vous avez un projet, une opportunité ou simplement envie d'échanger sur
+            des sujets techniques ? N'hésitez pas à me contacter. Je suis toujours
+            ouvert aux nouvelles collaborations.
+          </p>
+          <div class="contact-links">
+            <a href="https://github.com/Coccoonx" target="_blank" rel="noopener" class="contact-link-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <span>github.com/Coccoonx</span>
+            </a>
+            <a href="https://www.linkedin.com/in/lyonnel-dzotang-tchassen-37bb85104/" target="_blank" rel="noopener" class="contact-link-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>LinkedIn — Lyonnel Dzotang Tchassen</span>
+            </a>
+            <a href="https://medium.com/@dtlyonnel" target="_blank" rel="noopener" class="contact-link-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+              <span>Medium — @dtlyonnel</span>
+            </a>
+            <div class="contact-link-item" style="cursor: default;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Douala, Cameroun 🇨🇲</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="name">Votre nom</label>
+            <input type="text" id="name" name="name" placeholder="Jean Dupont" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Adresse e-mail</label>
+            <input type="email" id="email" name="email" placeholder="jean@exemple.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Envoyer le message
+          </button>
+          <p id="form-feedback" style="display:none; color: var(--accent); font-size: 0.9rem; margin-top: 0.5rem;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Lyonnel Dzotang Tchassen. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="https://github.com/Coccoonx" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/lyonnel-dzotang-tchassen-37bb85104/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://medium.com/@dtlyonnel" target="_blank" rel="noopener">Medium</a>
+        <a href="#home">Haut de page</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    /* ---- Theme management ---- */
+    const root = document.documentElement;
+    const toggleBtn = document.getElementById('themeToggle');
+
+    // Determine initial theme: localStorage > OS preference > dark default
+    function getInitialTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+
+    function applyTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+
+    applyTheme(getInitialTheme());
+
+    toggleBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      applyTheme(current === 'light' ? 'dark' : 'light');
+    });
+
+    // Keep in sync if the user changes OS theme
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        applyTheme(e.matches ? 'light' : 'dark');
+      }
+    });
+
+    /* ---- Hamburger / mobile menu ---- */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function closeMobileMenu() {
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('open');
+    }
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Close menu when a mobile link is clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close menu on outside click
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    /* ---- Active nav link on scroll ---- */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle(
+              'active',
+              link.getAttribute('href') === '#' + entry.target.id
+            );
+          });
+        }
+      });
+    }, { rootMargin: '-50% 0px -50% 0px' });
+
+    sections.forEach(section => observer.observe(section));
+
+    /* ---- Contact form feedback (no backend) ---- */
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      feedback.style.display = 'block';
+      feedback.textContent = '✅ Merci pour votre message ! Je vous répondrai très prochainement.';
+      e.target.reset();
+      setTimeout(() => { feedback.style.display = 'none'; }, 6000);
+    }
+  </script>
+</body>
+</html>
