@@ -879,6 +879,14 @@ img {
   color: #FFB900;
 }
 
+.cert-badge-img {
+  width: auto;
+  min-width: 0;
+  height: 28px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
 .cert-item strong {
   font-size: 0.9rem;
   display: block;
@@ -1188,4 +1196,3 @@ img {
     font-size: 0.95rem;
   }
 }
-
