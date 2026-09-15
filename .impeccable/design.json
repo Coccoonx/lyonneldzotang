@@ -1,0 +1,47 @@
+{
+  "world": "Drafting Plate",
+  "mode": "experience",
+  "colorStrategy": "committed",
+  "tokens": {
+    "dark": {
+      "primary": "#E0923F",
+      "primaryDark": "#C97727",
+      "bg": "#0A1420",
+      "bgCard": "#101F32",
+      "bgCardHover": "#152741",
+      "border": "#23374C",
+      "borderStrong": "#35506B",
+      "textPrimary": "#EAF1F8",
+      "textSecondary": "#C1D0DF",
+      "textMuted": "#93A8BC"
+    },
+    "light": {
+      "primary": "#A8571C",
+      "primaryDark": "#8C4715",
+      "bg": "#EDF2F6",
+      "bgCard": "#FFFFFF",
+      "bgCardHover": "#F3F7FA",
+      "border": "#CBD8E2",
+      "borderStrong": "#A9BDCC",
+      "textPrimary": "#10202E",
+      "textSecondary": "#3C5468",
+      "textMuted": "#3C5468"
+    },
+    "radius": "6px",
+    "radiusSm": "3px",
+    "transition": "0.25s ease"
+  },
+  "type": {
+    "display": "Overpass",
+    "body": "IBM Plex Sans",
+    "mono": "IBM Plex Mono"
+  },
+  "components": {
+    "plate": "corner-tick card signature replacing top-stripe/glow",
+    "heroMark": "real portrait photo (assets/lyonnel-portrait.jpg) in a corner-tick frame",
+    "iconSystem": "hand-drawn 24x24 stroke icons replacing all emoji"
+  },
+  "openItems": [
+    "CV download links still route through bit.ly (user deferred fix)"
+  ]
+}
