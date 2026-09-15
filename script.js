@@ -86,4 +86,48 @@
     }, { threshold: .08 });
     document.querySelectorAll('.timeline-item').forEach(item => observer.observe(item));
   }
+
+  /* ---- Analytics: custom GA4 events ---- */
+  const track = (name, params) => {
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+  };
+
+  document.querySelectorAll('.contact-primary .btn').forEach(link => {
+    link.addEventListener('click', () => track('contact_click', { method: 'email' }));
+  });
+
+  document.querySelectorAll('.cv-download-actions .btn').forEach(link => {
+    link.addEventListener('click', () => {
+      const language = /cv-fr/.test(link.href) ? 'fr' : /resume-en/.test(link.href) ? 'en' : 'unknown';
+      track('cv_download', { language });
+    });
+  });
+
+  document.querySelectorAll('.project-card a').forEach(link => {
+    link.addEventListener('click', () => {
+      const card = link.closest('.project-card');
+      const title = card ? card.querySelector('.project-title') : null;
+      track('project_click', {
+        project_name: title ? title.textContent.trim() : 'unknown',
+        link_url: link.href,
+      });
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    const footerEl = document.querySelector('.footer');
+    if (footerEl) {
+      let footerSeen = false;
+      const footerObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !footerSeen) {
+            footerSeen = true;
+            track('scroll_to_bottom');
+            footerObserver.disconnect();
+          }
+        });
+      }, { threshold: .1 });
+      footerObserver.observe(footerEl);
+    }
+  }
 })();
