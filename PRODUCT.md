@@ -8,11 +8,11 @@ web
 
 ## Users
 
-Professional network and peers — tech community, colleagues, and other developers encountering the site through GitHub, Medium, or professional channels. Not scoped to a specific recruiter-screening or client-sales funnel; the site is a general professional presence.
+Professional network and peers — tech community, colleagues, and other developers encountering the site through GitHub or professional channels. Not scoped to a specific recruiter-screening or client-sales funnel; the site is a general professional presence.
 
 ## Product Purpose
 
-A personal portfolio site for Lyonnel Dzotang Tchassen, Senior IT Developer, presenting his profile, technical skills, experience, and project work. It exists to give the professional community a clear, credible view of his background and technical range.
+A personal portfolio site for Lyonnel Dzotang Tchassen, Senior Consultant, presenting his profile, technical skills, experience, and project work. It exists to give the professional community a clear, credible view of his background and technical range.
 
 ## Positioning
 
@@ -28,7 +28,7 @@ A personal portfolio site for Lyonnel Dzotang Tchassen, Senior IT Developer, pre
 
 - Sections: Hero, About, Skills, Experience, Projects, Contact — present on both language versions.
 - Skills catalogued by category: Java/JVM, APIs & Services, Cloud AWS, plus DevOps/CI-CD and frontend/mobile stacks referenced in About and Projects.
-- Projects section lists real, named GitHub repositories (e.g. Vending Machine API, QG-Gochiver, Dashboard Full-Stack, Gefi, Relieferd, Série Snacks) with year, description, and tech tags — all linking to https://github.com/Coccoonx.
+- Projects section lists real, named repositories and products (e.g. Namoony, Vending Machine API, QG-Gochiver, Dashboard Full-Stack, Gefi, Relieferd, Série Snacks), with year, description, and tech tags. Namoony links to https://namoony.lyonneldzotang.com/; legacy repositories link to https://github.com/Coccoonx.
 - Dark/light theme toggle (localStorage-persisted, OS-preference fallback) and mobile hamburger nav are existing functional requirements, not incidental.
 - No backend, no build tooling, no package manager currently in the repo — plain HTML/CSS/JS.
 
@@ -36,11 +36,11 @@ A personal portfolio site for Lyonnel Dzotang Tchassen, Senior IT Developer, pre
 
 - Name: Lyonnel Dzotang Tchassen. Current role stated: Senior Consultant @ CGI, Québec, Canada.
 - Voice/tagline used in both About and Hero: "L'humain au cœur de l'action" / "L'humain au cœur de l'entreprise" — a human-centered framing of technical work.
-- External identity links treated as binding/real: GitHub (github.com/Coccoonx), Medium (medium.com/@dtlyonnel).
+- External identity links treated as binding/real: GitHub (github.com/Coccoonx) and LinkedIn.
 
 ## Evidence on Hand
 
-- Career facts (employer, years of experience, certifications, degree — Master IT from Université de Douala, Oracle & AWS certifications), skills, and project list are sourced directly from the existing site content and are treated as factual; future work must not invent additional testimonials, employers, metrics, or projects beyond what's already stated or explicitly provided by the user.
+- Career facts (employer, years of experience, certifications, degree — Master IT from Université de Douala, Oracle & AWS certifications), skills, and project list are sourced directly from the existing site content or explicitly provided by the user and are treated as factual. Namoony is a current expense-management product for Québec households that reads receipt line items and accounts for TPS/TVQ; its confirmed stack is React, Java 21, n8n, AI/LLM and GitHub CI/CD. Future work must not invent additional testimonials, employers, metrics, or projects beyond supplied truth.
 - No constraints were flagged beyond what the current implementation already embodies (static, bilingual, GitHub Pages-deployable); future work has latitude to introduce build tooling or frameworks if it clearly helps, without being required to preserve zero-build as a hard rule.
 
 ## Product Principles
