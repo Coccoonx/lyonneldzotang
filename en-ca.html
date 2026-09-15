@@ -10,10 +10,8 @@
   <link rel="alternate" hreflang="en-CA" href="en-ca.html" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-  <!-- Fonts: Overpass (display), IBM Plex Sans (body), IBM Plex Mono (data) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="theme-init.js"></script>
+  <script src="script.js" defer></script>
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
@@ -24,7 +22,7 @@
   <!-- ========== NAVIGATION ========== -->
   <nav class="nav">
     <div class="container nav-inner">
-      <a href="#" class="nav-logo">LDT<span>.</span></a>
+      <a href="#home" class="nav-logo">LDT<span>.</span></a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -40,7 +38,7 @@
           <!-- sun icon (shown in light mode) -->
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
-        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <button class="hamburger" id="hamburger" aria-controls="mobileMenu" aria-label="Menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -64,50 +62,22 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-content">
-          <div class="hero-badge"><span class="icon" aria-hidden="true"></span> Senior IT Developer · Québec, Canada</div>
-          <h1 class="hero-title">
-            Lyonnel<br />
-            <span class="highlight">Dzotang</span> Tchassen
-          </h1>
-          <p class="hero-subtitle">Senior Java Developer @ CGI · Cloud Aware · AI enthusiast · Full Stack · Spring Boot · Angular · RDBMS</p>
-          <p class="hero-description">
-            Passionate about human value, I contribute to progress in our era through
-            information and communication technologies. I design high-performing, robust
-            information systems that create positive impact on people's living conditions. "People at the heart of action" perfectly matches my aspirations.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> See my projects
-            </a>
-            <a href="https://github.com/Coccoonx" target="_blank" rel="noopener" class="btn btn-outline">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> GitHub
-            </a>
-          </div>
-          <div class="hero-stats">
-            <div class="stat">
-              <span class="stat-number">11+</span>
-              <span class="stat-label">Years of experience</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">15+</span>
-              <span class="stat-label">Projects delivered</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">9</span>
-              <span class="stat-label">Certifications</span>
+          <h1 class="hero-title"><span>Lyonnel</span><span class="highlight">Dzotang</span><span>Tchassen</span></h1>
+          <div class="hero-intro">
+            <p class="hero-subtitle">Senior Java Developer at CGI · Québec</p>
+            <p class="hero-description">People at the heart of action.</p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">Explore my projects <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
+              <a href="#contact" class="text-link">Get in touch</a>
             </div>
           </div>
         </div>
-        <div class="hero-mark">
-          <img class="hero-mark-photo" src="assets/lyonnel-portrait.jpg" alt="Portrait of Lyonnel Dzotang Tchassen" width="260" height="320" />
-          <svg class="hero-mark-frame" viewBox="0 0 260 320" aria-hidden="true">
-            <path d="M4 22V6h18" />
-            <path d="M238 6h18v16" />
-            <path d="M4 298v16h18" />
-            <path d="M238 314h18v-16" />
-          </svg>
-        </div>
+        <figure class="hero-mark">
+          <div class="portrait-window"><img class="hero-mark-photo" src="assets/lyonnel-portrait.jpg" alt="Portrait of Lyonnel Dzotang Tchassen" width="900" height="1350" fetchpriority="high" /></div>
+          <figcaption><span>Québec, Canada</span><span>Lyonnel D. Tchassen</span></figcaption>
+        </figure>
       </div>
+      <div class="hero-foot"><span>Java · Cloud AWS · Software architecture</span><a href="#about">Meet the person <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></div>
     </div>
   </section>
 
@@ -137,28 +107,28 @@
           </p>
         </div>
         <div class="about-highlights">
-          <div class="highlight-item plate">
+          <div class="highlight-item">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M9 7V3M15 7V3M9 21v-4M15 21v-4M7 9H3M7 15H3M21 9h-4M21 15h-4"/></svg>
             <div>
               <h3>Architecture Backend & Microservices</h3>
               <p>Design of secure REST APIs with Spring Boot, Java 17, JWT, Spring Security, and microservices architecture</p>
             </div>
           </div>
-          <div class="highlight-item plate">
+          <div class="highlight-item">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H7a5 5 0 0 1-1-9.9V9a6 6 0 0 1 11.7-2 4.5 4.5 0 0 1-.2 8.9Z"/></svg>
             <div>
               <h3>Cloud AWS & DevOps</h3>
               <p>Cloud-native development with Lambda, SQS, DynamoDB, S3 · GitLab CI/CD · Terraform infrastructure · SonarQube</p>
             </div>
           </div>
-          <div class="highlight-item plate">
+          <div class="highlight-item">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 8.5h18"/><circle cx="6.3" cy="6.25" r="0.6" fill="currentColor" stroke="none"/><circle cx="8.6" cy="6.25" r="0.6" fill="currentColor" stroke="none"/></svg>
             <div>
               <h3>Full-Stack Development</h3>
               <p>From Java Spring Boot on the backend to Angular / AngularJS / Node.js on the frontend</p>
             </div>
           </div>
-          <div class="highlight-item plate">
+          <div class="highlight-item">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
             <div>
               <h3>Mobile Development & Leadership</h3>
@@ -167,6 +137,7 @@
           </div>
         </div>
       </div>
+      <ul class="profile-facts"><li><strong>11+</strong> years of experience</li><li><strong>15+</strong> projects delivered</li><li><strong>9</strong> certifications</li></ul>
     </div>
   </section>
 
@@ -191,7 +162,7 @@
 
         <div class="skills-grid">
 
-          <div class="skill-category plate">
+          <div class="skill-category">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M9 7V3M15 7V3M9 21v-4M15 21v-4M7 9H3M7 15H3M21 9h-4M21 15h-4"/></svg>
               <span class="skill-cat-title">Java & JVM</span>
@@ -210,7 +181,7 @@
             </div>
           </div>
 
-          <div class="skill-category plate">
+          <div class="skill-category">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 4 12l4 9"/><path d="M16 3l4 9-4 9"/></svg>
               <span class="skill-cat-title">APIs & Services</span>
@@ -230,7 +201,7 @@
             </div>
           </div>
 
-          <div class="skill-category plate">
+          <div class="skill-category">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H7a5 5 0 0 1-1-9.9V9a6 6 0 0 1 11.7-2 4.5 4.5 0 0 1-.2 8.9Z"/></svg>
               <span class="skill-cat-title">Cloud AWS</span>
@@ -249,7 +220,7 @@
             </div>
           </div>
 
-          <div class="skill-category plate">
+          <div class="skill-category">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 6.5a5 5 0 0 1 0 10"/><path d="M6.5 6.5a5 5 0 0 0 0 10"/><path d="M6.5 6.5h11M6.5 16.5h11"/></svg>
               <span class="skill-cat-title">DevOps & CI/CD</span>
@@ -267,7 +238,7 @@
             </div>
           </div>
 
-          <div class="skill-category plate">
+          <div class="skill-category">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="7" ry="2.5"/><path d="M5 5v14c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V5"/><path d="M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg>
               <span class="skill-cat-title">Databases</span>
@@ -285,7 +256,7 @@
             </div>
           </div>
 
-          <div class="skill-category plate">
+          <div class="skill-category">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 8.5h18"/><circle cx="6.3" cy="6.25" r="0.6" fill="currentColor" stroke="none"/><circle cx="8.6" cy="6.25" r="0.6" fill="currentColor" stroke="none"/></svg>
               <span class="skill-cat-title">Frontend & Web</span>
@@ -302,7 +273,7 @@
             </div>
           </div>
 
-          <div class="skill-category plate">
+          <div class="skill-category">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
               <span class="skill-cat-title">Mobile & Other</span>
@@ -328,64 +299,64 @@
           <div>
             <p class="credentials-group-title">Certifications</p>
             <div class="cert-list">
-              <div class="cert-item plate">
-                <div class="cert-badge-tile"><img class="cert-badge-img" src="https://github.com/user-attachments/assets/56078456-a973-4af6-a7c3-b64ad6522e14" alt="AWS Solutions Architect Associate badge" loading="lazy" decoding="async" /></div>
+              <div class="cert-item">
+                <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-1.png" alt="AWS Solutions Architect Associate badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>AWS Certified Solutions Architect — Associate</strong>
                   <small>Amazon Web Services · Issued in Oct 2025</small>
                 </div>
               </div>
-              <div class="cert-item plate">
-                <div class="cert-badge-tile"><img class="cert-badge-img" src="https://img.shields.io/badge/Google-Project_Management-4285F4?style=for-the-badge&amp;logo=google&amp;logoColor=white" alt="Google Project Management badge" loading="lazy" decoding="async" /></div>
+              <div class="cert-item">
+                <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-2.svg" alt="Google Project Management badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Foundations of Project Management</strong>
                   <small>Google · Issued in Jul 2023</small>
                 </div>
               </div>
-              <div class="cert-item plate">
-                <div class="cert-badge-tile"><img class="cert-badge-img" src="https://img.shields.io/badge/ITC-Supply_Chain_Management-0A6EBD?style=for-the-badge" alt="ITC Supply Chain Management badge" loading="lazy" decoding="async" /></div>
+              <div class="cert-item">
+                <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-3.svg" alt="ITC Supply Chain Management badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Introduction to Supply Chain Management</strong>
                   <small>ITC SME Trade Academy · Issued in Sep 2020</small>
                 </div>
               </div>
-              <div class="cert-item plate">
-                <div class="cert-badge-tile"><img class="cert-badge-img" src="https://img.shields.io/badge/ITC-Trade_Flows-0A6EBD?style=for-the-badge" alt="ITC Trade Flows badge" loading="lazy" decoding="async" /></div>
+              <div class="cert-item">
+                <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-4.svg" alt="ITC Trade Flows badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>How to Analyse Trade Flows</strong>
                   <small>ITC SME Trade Academy · Issued in Aug 2020</small>
                 </div>
               </div>
-              <div class="cert-item plate">
-                <div class="cert-badge-tile"><img class="cert-badge-img" src="https://img.shields.io/badge/ITC-Trade_Facilitation-0A6EBD?style=for-the-badge" alt="ITC Trade Facilitation badge" loading="lazy" decoding="async" /></div>
+              <div class="cert-item">
+                <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-5.svg" alt="ITC Trade Facilitation badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Introduction à l'Accord de l'OMC sur la facilitation des échanges</strong>
                   <small>ITC SME Trade Academy · Issued in Aug 2020</small>
                 </div>
               </div>
-              <div class="cert-item plate">
-                <div class="cert-badge-tile"><img class="cert-badge-img" src="https://github.com/user-attachments/assets/c1d04ba4-fe42-4bd4-9ab0-0fd195fefcc6" alt="AWS Cloud Practitioner badge" loading="lazy" decoding="async" /></div>
+              <div class="cert-item">
+                <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-6.png" alt="AWS Cloud Practitioner badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>AWS Certified Cloud Practitioner</strong>
                   <small>Amazon Web Services · Issued in Jul 2024</small>
                 </div>
               </div>
-              <div class="cert-item plate">
-                <div class="cert-badge-tile"><img class="cert-badge-img" src="https://img.shields.io/badge/Scrum-Fundamentals-009FDA?style=for-the-badge" alt="Scrum Fundamentals badge" loading="lazy" decoding="async" /></div>
+              <div class="cert-item">
+                <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-7.svg" alt="Scrum Fundamentals badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Scrum Fundamentals Certified</strong>
                   <small>Vabro.ai and VMEdu.com · Issued in Apr 2019</small>
                 </div>
               </div>
-              <div class="cert-item plate">
-                <div class="cert-badge-tile"><img class="cert-badge-img" src="https://github.com/user-attachments/assets/168203d4-fb50-4c50-bf21-3f206baa89c7" alt="Oracle OCP badge" loading="lazy" decoding="async" /></div>
+              <div class="cert-item">
+                <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-8.png" alt="Oracle OCP badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Oracle Certified Professional</strong>
                   <small>Java SE 7 Programmer · Oracle · Issued in Jun 2015</small>
                 </div>
               </div>
-              <div class="cert-item plate">
-                <div class="cert-badge-tile"><img class="cert-badge-img" src="https://github.com/user-attachments/assets/389f35ef-4813-4294-9500-443a9073a824" alt="Oracle OCA badge" loading="lazy" decoding="async" /></div>
+              <div class="cert-item">
+                <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-9.png" alt="Oracle OCA badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Oracle Certified Associate</strong>
                   <small>Java SE 7 Programmer · Oracle · Issued in Mar 2015</small>
@@ -396,14 +367,14 @@
           <div>
             <p class="credentials-group-title">Academic education</p>
             <div class="cert-list">
-              <div class="cert-item plate">
+              <div class="cert-item">
                 <div class="cert-badge-tile cert-badge-tile--icon"><svg class="cert-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V6a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v13.5"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 18H20"/><path d="M8 7h8M8 11h6"/></svg></div>
                 <div>
                   <strong>Master — Information Technology</strong>
                   <small>University of Douala · Oct 2020 – Apr 2023</small>
                 </div>
               </div>
-              <div class="cert-item plate">
+              <div class="cert-item">
                 <div class="cert-badge-tile cert-badge-tile--icon"><svg class="cert-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V6a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v13.5"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 18H20"/><path d="M8 7h8M8 11h6"/></svg></div>
                 <div>
                   <strong>Bachelor — Computer &amp; Information Sciences</strong>
@@ -425,8 +396,7 @@
 
         <!-- CGI -->
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content plate">
+          <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-company">CGI</h3>
               <span class="timeline-badge timeline-badge--current">Current role</span>
@@ -451,8 +421,7 @@
 
         <!-- SERVOO -->
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content plate">
+          <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-company">SERVICE OPTIMIZATION ORIENTED (SERVOO)</h3>
             </div>
@@ -472,8 +441,7 @@
 
         <!-- GUCE -->
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content plate">
+          <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-company">GUCE — Single Window for Foreign Trade Operations</h3>
             </div>
@@ -511,8 +479,7 @@
 
         <!-- Software Engineer (before GUCE) -->
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content plate">
+          <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-company">Software Engineer</h3>
             </div>
@@ -531,8 +498,7 @@
 
         <!-- MyBonWays -->
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content plate">
+          <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-company">MyBonWays</h3>
             </div>
@@ -552,8 +518,7 @@
 
         <!-- WOURI TECHNOLOGIES -->
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content plate">
+          <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-company">WOURI TECHNOLOGIES Co</h3>
             </div>
@@ -573,8 +538,7 @@
 
         <!-- LRI SARL -->
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content plate">
+          <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-company">LRI SARL</h3>
             </div>
@@ -597,16 +561,14 @@
       <div class="projects-grid">
 
         <!-- Vending Machine -->
-        <div class="project-card plate">
+        <div class="project-card">
           <div class="project-header">
-            <span class="project-code">N&deg;01</span>
             <div class="project-links">
-              <a href="https://github.com/Coccoonx/vending-machine" target="_blank" rel="noopener" class="project-link" title="View on GitHub">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <a href="https://github.com/Coccoonx/vending-machine" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
               </a>
             </div>
           </div>
-          <h3 class="project-title">Vending Machine API</h3>
+          <h3 class="project-title"><a href="https://github.com/Coccoonx/vending-machine" target="_blank" rel="noopener">Vending Machine API</a></h3>
           <p class="project-year">2022</p>
           <p class="project-description">
             Complete REST API simulating a vending machine. Handles seller/buyer roles,
@@ -626,16 +588,14 @@
         </div>
 
         <!-- QG-Gochiver -->
-        <div class="project-card plate">
+        <div class="project-card">
           <div class="project-header">
-            <span class="project-code">N&deg;02</span>
             <div class="project-links">
-              <a href="https://github.com/Coccoonx/qg-gochiver" target="_blank" rel="noopener" class="project-link" title="View on GitHub">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <a href="https://github.com/Coccoonx/qg-gochiver" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
               </a>
             </div>
           </div>
-          <h3 class="project-title">QG-Gochiver</h3>
+          <h3 class="project-title"><a href="https://github.com/Coccoonx/qg-gochiver" target="_blank" rel="noopener">QG-Gochiver</a></h3>
           <p class="project-year">2017</p>
           <p class="project-description">
             Spring Boot cloud application with Thymeleaf interface and Spring Security.
@@ -655,16 +615,14 @@
         </div>
 
         <!-- Dashboard -->
-        <div class="project-card plate">
+        <div class="project-card">
           <div class="project-header">
-            <span class="project-code">N&deg;03</span>
             <div class="project-links">
-              <a href="https://github.com/Coccoonx/dashboard" target="_blank" rel="noopener" class="project-link" title="View on GitHub">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <a href="https://github.com/Coccoonx/dashboard" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
               </a>
             </div>
           </div>
-          <h3 class="project-title">Dashboard Full-Stack</h3>
+          <h3 class="project-title"><a href="https://github.com/Coccoonx/dashboard" target="_blank" rel="noopener">Dashboard Full-Stack</a></h3>
           <p class="project-year">2015 – 2017</p>
           <p class="project-description">
             Full-stack web application with AngularJS frontend and Node.js/Express backend.
@@ -684,16 +642,14 @@
         </div>
 
         <!-- Gefi -->
-        <div class="project-card plate">
+        <div class="project-card">
           <div class="project-header">
-            <span class="project-code">N&deg;04</span>
             <div class="project-links">
-              <a href="https://github.com/Coccoonx/gefi" target="_blank" rel="noopener" class="project-link" title="View on GitHub">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <a href="https://github.com/Coccoonx/gefi" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
               </a>
             </div>
           </div>
-          <h3 class="project-title">Gefi — Financial Management</h3>
+          <h3 class="project-title"><a href="https://github.com/Coccoonx/gefi" target="_blank" rel="noopener">Gefi — Financial Management</a></h3>
           <p class="project-year">2016 – 2018</p>
           <p class="project-description">
             Financial management application developed with Spring Boot and Spring Data REST.
@@ -712,16 +668,14 @@
         </div>
 
         <!-- Relieferd -->
-        <div class="project-card plate">
+        <div class="project-card">
           <div class="project-header">
-            <span class="project-code">N&deg;05</span>
             <div class="project-links">
-              <a href="https://github.com/Coccoonx/relieferd" target="_blank" rel="noopener" class="project-link" title="View on GitHub">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <a href="https://github.com/Coccoonx/relieferd" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
               </a>
             </div>
           </div>
-          <h3 class="project-title">Relieferd — Android Application</h3>
+          <h3 class="project-title"><a href="https://github.com/Coccoonx/relieferd" target="_blank" rel="noopener">Relieferd — Android Application</a></h3>
           <p class="project-year">2015 – 2016</p>
           <p class="project-description">
             Native Android app developed in Java with Gradle. Component-oriented
@@ -737,16 +691,14 @@
         </div>
 
         <!-- Cassnaks / Snacks series -->
-        <div class="project-card plate">
+        <div class="project-card">
           <div class="project-header">
-            <span class="project-code">N&deg;06</span>
             <div class="project-links">
-              <a href="https://github.com/Coccoonx/cassnaks" target="_blank" rel="noopener" class="project-link" title="View on GitHub">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <a href="https://github.com/Coccoonx/cassnaks" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
               </a>
             </div>
           </div>
-          <h3 class="project-title">Snacks Series — Java Projects</h3>
+          <h3 class="project-title"><a href="https://github.com/Coccoonx/cassnaks" target="_blank" rel="noopener">Snacks Series — Java Projects</a></h3>
           <p class="project-year">2016</p>
           <p class="project-description">
             Set of Java projects (cassnaks, snacks, backsnack) exploring concepts
@@ -755,8 +707,8 @@
           </p>
           <div class="project-tech">
             <span class="tag">Java</span>
-            <span class="tag">POO</span>
-            <span class="tag">Algorithmes</span>
+            <span class="tag">OOP</span>
+            <span class="tag">Algorithms</span>
             <span class="tag">Maven</span>
           </div>
         </div>
@@ -802,7 +754,7 @@
             </p>
           </div>
         </div>
-        <div class="cv-download plate">
+        <div class="cv-download">
           <h3 class="cv-download-title">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="12" y2="18"/><line x1="15" y1="15" x2="12" y2="18"/></svg>
             Download my resume
@@ -838,86 +790,6 @@
   </footer>
 
   <!-- ========== SCRIPTS ========== -->
-  <script>
-    /* ---- Theme management ---- */
-    const root = document.documentElement;
-    const toggleBtn = document.getElementById('themeToggle');
 
-    // Determine initial theme: localStorage > OS preference > dark default
-    function getInitialTheme() {
-      const stored = localStorage.getItem('theme');
-      if (stored) return stored;
-      return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    }
-
-    function applyTheme(theme) {
-      root.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      toggleBtn.setAttribute('aria-pressed', String(theme === 'light'));
-      toggleBtn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
-    }
-
-    applyTheme(getInitialTheme());
-
-    toggleBtn.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme');
-      applyTheme(current === 'light' ? 'dark' : 'light');
-    });
-
-    // Keep in sync if the user changes OS theme
-    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
-      if (!localStorage.getItem('theme')) {
-        applyTheme(e.matches ? 'light' : 'dark');
-      }
-    });
-
-    /* ---- Hamburger / mobile menu ---- */
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    function closeMobileMenu() {
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      mobileMenu.classList.remove('open');
-    }
-
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    // Close menu when a mobile link is clicked
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-
-    // Close menu on outside click
-    document.addEventListener('click', (e) => {
-      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-        closeMobileMenu();
-      }
-    });
-
-    /* ---- Active nav link on scroll ---- */
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => {
-            link.classList.toggle(
-              'active',
-              link.getAttribute('href') === '#' + entry.target.id
-            );
-          });
-        }
-      });
-    }, { rootMargin: '-50% 0px -50% 0px' });
-
-    sections.forEach(section => observer.observe(section));
-
-  </script>
 </body>
 </html>

@@ -1,0 +1,3 @@
+# Local browser evidence and machine-specific verification helper.
+review/
+verify-editorial.cjs

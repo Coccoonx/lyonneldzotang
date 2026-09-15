@@ -1,47 +1,154 @@
-{
-  "world": "Drafting Plate",
-  "mode": "experience",
-  "colorStrategy": "committed",
-  "tokens": {
-    "dark": {
-      "primary": "#E0923F",
-      "primaryDark": "#C97727",
-      "bg": "#0A1420",
-      "bgCard": "#101F32",
-      "bgCardHover": "#152741",
-      "border": "#23374C",
-      "borderStrong": "#35506B",
-      "textPrimary": "#EAF1F8",
-      "textSecondary": "#C1D0DF",
-      "textMuted": "#93A8BC"
+﻿{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-14T00:00:00Z",
+  "title": "Design System: Élégance éditoriale",
+  "extensions": {
+    "typographyMeta": {
+      "display": {
+        "displayName": "Editorial name",
+        "purpose": "Personal name; responsive sizes are defined in styles.css."
+      },
+      "headline": {
+        "displayName": "Section heading",
+        "purpose": "Serif section hierarchy."
+      },
+      "body": {
+        "displayName": "Reading text",
+        "purpose": "Professional prose and supporting details."
+      }
     },
-    "light": {
-      "primary": "#A8571C",
-      "primaryDark": "#8C4715",
-      "bg": "#EDF2F6",
-      "bgCard": "#FFFFFF",
-      "bgCardHover": "#F3F7FA",
-      "border": "#CBD8E2",
-      "borderStrong": "#A9BDCC",
-      "textPrimary": "#10202E",
-      "textSecondary": "#3C5468",
-      "textMuted": "#3C5468"
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Entrance, underline and arrow easing."
+      },
+      {
+        "name": "name-arrival",
+        "value": "700ms",
+        "purpose": "Opacity .35 to 1 and 16px upward arrival."
+      },
+      {
+        "name": "portrait-reveal",
+        "value": "700ms; delay: 140ms",
+        "purpose": "Clip inset 0 0 12% 0 to 0; opacity .45 to 1."
+      },
+      {
+        "name": "career-arrival",
+        "value": "600ms",
+        "purpose": "Once per career row, at .08 intersection; opacity .4 to 1 and 14px upward arrival."
+      },
+      {
+        "name": "state",
+        "value": "220ms ease",
+        "purpose": "Color, background and border states."
+      },
+      {
+        "name": "link-detail",
+        "value": "350ms",
+        "purpose": "Underline scale and 4px arrow movement."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1050px"
+      },
+      {
+        "name": "mobile",
+        "value": "780px"
+      },
+      {
+        "name": "small-mobile",
+        "value": "420px"
+      }
+    ],
+    "accessibility": {
+      "focus": "2px solid var(--primary); outline-offset: 5px",
+      "reducedMotion": "Disable all animations, transitions, smooth scrolling and hover arrow transforms; content is visible by default.",
+      "theme": "Stored light/dark choice takes precedence; otherwise follow OS preference before paint and on change."
     },
-    "radius": "6px",
-    "radiusSm": "3px",
-    "transition": "0.25s ease"
+    "assets": {
+      "portrait": {
+        "file": "assets/lyonnel-portrait.jpg",
+        "provenance": "Existing repository user portrait, not generated."
+      },
+      "badges": {
+        "manifest": "assets/badges/provenance.json",
+        "provenance": "Nine original portfolio graphics localized unchanged; white tile preserves artwork in either theme."
+      },
+      "fonts": {
+        "stylesheet": "assets/fonts/fonts.css",
+        "source": "Google Fonts",
+        "licenses": [
+          "assets/fonts/bodoni-moda-OFL.txt",
+          "assets/fonts/source-sans-3-OFL.txt"
+        ],
+        "delivery": "Self-hosted TTF; font-display: swap."
+      }
+    }
   },
-  "type": {
-    "display": "Overpass",
-    "body": "IBM Plex Sans",
-    "mono": "IBM Plex Mono"
-  },
-  "components": {
-    "plate": "corner-tick card signature replacing top-stripe/glow",
-    "heroMark": "real portrait photo (assets/lyonnel-portrait.jpg) in a corner-tick frame",
-    "iconSystem": "hand-drawn 24x24 stroke icons replacing all emoji"
-  },
-  "openItems": [
-    "CV download links still route through bit.ly (user deferred fix)"
-  ]
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Solid rectangular project or CV action.",
+      "html": "<a class=\"ds-primary\" href=\"#projects\">Explore my projects</a>",
+      "css": ".ds-primary{font-family:var(--font-body,'Source Sans 3','Segoe UI',sans-serif);display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.3rem;font-size:.96rem;font-weight:500;border:1px solid transparent;text-decoration:none;transition:background 220ms ease,color 220ms ease,border-color 220ms ease;background:var(--text-primary,#252620);color:var(--bg,#f5f1e8)}.ds-primary:hover{background:var(--primary,#7e623e);color:var(--button-text,#f5f1e8)}.ds-primary:focus-visible{outline:2px solid var(--primary,#7e623e);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Outline action",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary CV action.",
+      "html": "<a class=\"ds-outline\" href=\"#contact\">English résumé</a>",
+      "css": ".ds-outline{font-family:var(--font-body,'Source Sans 3','Segoe UI',sans-serif);display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.3rem;font-size:.96rem;font-weight:500;border:1px solid transparent;text-decoration:none;transition:background 220ms ease,color 220ms ease,border-color 220ms ease;color:var(--text-primary,#252620);border-color:var(--border-strong,#948773)}.ds-outline:hover{border-color:var(--primary,#7e623e);background:var(--bg-soft,#ece7dc)}.ds-outline:focus-visible{outline:2px solid var(--primary,#7e623e);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-outline{transition:none}}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Quiet navigation with a ruled active state.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#about\" aria-current=\"location\">About</a><a href=\"#projects\">Projects</a></nav>",
+      "css": ".ds-nav{display:flex;gap:2rem;font-family:var(--font-body,'Source Sans 3','Segoe UI',sans-serif);}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;font-size:.94rem;position:relative;color:var(--text-secondary,#58594e);text-decoration:none}.ds-nav a::after{content:'';position:absolute;bottom:4px;left:0;right:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform 350ms var(--ease,cubic-bezier(.16,1,.3,1))}.ds-nav a:hover::after,.ds-nav a[aria-current]::after{transform:scaleX(1)}.ds-nav a[aria-current]{color:var(--text-primary,#252620)}.ds-nav a:focus-visible{outline:2px solid var(--primary,#7e623e);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-nav a::after{transition:none}}"
+    },
+    {
+      "name": "Technical tags",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Plain noninteractive labels separated by slashes.",
+      "html": "<div class=\"ds-tags\"><span>Java</span><span>Spring Boot</span><span>AWS</span></div>",
+      "css": ".ds-tags{display:flex;flex-wrap:wrap;gap:.45rem 1rem;font-family:var(--font-body,'Source Sans 3','Segoe UI',sans-serif);color:var(--text-secondary,#58594e);font-size:.85rem;line-height:1.6}.ds-tags span:not(:last-child)::after{content:'/';margin-left:1rem;color:var(--border-strong,#948773)}"
+    },
+    {
+      "name": "Open project entry",
+      "kind": "custom",
+      "description": "Ruled editorial entry with serif title and supporting text.",
+      "html": "<article class=\"ds-project\"><h3><a href=\"#projects\">Vending Machine API</a></h3><p>Java · Spring Boot</p></article>",
+      "css": ".ds-project{padding-block:2.75rem;border-top:1px solid var(--border,#d2cabc);color:var(--text-primary,#252620)}.ds-project h3{font:400 1.85rem/1.3 var(--font-display,'Bodoni Moda',Georgia,serif);margin:0 0 .75rem}.ds-project a{color:inherit;text-decoration:none}.ds-project a:hover{color:var(--primary,#7e623e);text-decoration:underline}.ds-project a:focus-visible{outline:2px solid var(--primary,#7e623e);outline-offset:5px}.ds-project p{font-family:var(--font-body,'Source Sans 3','Segoe UI',sans-serif);color:var(--text-secondary,#58594e);margin:0}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Élégance éditoriale",
+    "overview": "A calm, cultivated personal presence. Aristocratic restraint comes from fine serif typography, generous space, a real portrait and precise rules. The user approved this replacement identity for both French and Canadian English pages.",
+    "keyCharacteristics": [
+      "Ivory, ink and a restrained bronze accent, with a charcoal alternate theme.",
+      "Serif display typography paired with clear sans-serif reading text.",
+      "Open rows, fine separators and square silhouettes.",
+      "Brief entrance motion with immediately visible content under reduced motion."
+    ],
+    "rules": [],
+    "dos": [
+      "**Do** apply the same visual rules to French and Canadian English.",
+      "**Do** use open rows and fine separators to organize dense professional content.",
+      "**Do** preserve readable text, keyboard focus and immediately available content.",
+      "**Do** retain provenance and licenses with local identity assets."
+    ],
+    "donts": [
+      "**Don't** reintroduce the drafting grid, corner ticks or enclosing portfolio plates.",
+      "**Don't** make animation a prerequisite for reading content.",
+      "**Don't** recolor or fabricate certification artwork."
+    ]
+  }
 }
