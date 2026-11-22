@@ -96,13 +96,6 @@
     link.addEventListener('click', () => track('contact_click', { method: 'email' }));
   });
 
-  document.querySelectorAll('.cv-download-actions .btn').forEach(link => {
-    link.addEventListener('click', () => {
-      const language = /cv-fr/.test(link.href) ? 'fr' : /resume-en/.test(link.href) ? 'en' : 'unknown';
-      track('cv_download', { language });
-    });
-  });
-
   document.querySelectorAll('.project-card a').forEach(link => {
     link.addEventListener('click', () => {
       const card = link.closest('.project-card');
@@ -130,4 +123,95 @@
       footerObserver.observe(footerEl);
     }
   }
+
+  /* ---- Professional profile: all | tech | management ---- */
+  const PROFILES = ['all', 'tech', 'management'];
+  const profileParam = english ? 'profile' : 'profil';
+  const profileNames = english
+    ? { all: 'All', tech: 'Tech', management: 'Management' }
+    : { all: 'Tout', tech: 'Tech', management: 'Management' };
+  const switches = [...document.querySelectorAll('.profile-switch')];
+  const timeline = document.querySelector('.timeline');
+  const items = [...document.querySelectorAll('.timeline-item[data-profiles]')];
+  const status = document.getElementById('profileStatus');
+  const langLinks = [...document.querySelectorAll('.lang-switch, .mobile-menu a[href$=".html"]')];
+
+  const matches = (el, profile) => profile === 'all' || el.dataset.profiles.split(/\s+/).includes(profile);
+  // A position is a role block (GUCE holds several) or an entry with a single role.
+  const positions = items.flatMap(item => {
+    const roles = [...item.querySelectorAll('.timeline-role-block[data-profiles]')];
+    return roles.length ? roles : [item];
+  });
+
+  function statusText(profile) {
+    const total = positions.length;
+    const shown = positions.filter(position => matches(position, profile)).length;
+    if (profile === 'all') return english ? `${total} positions` : `${total} postes`;
+    return english
+      ? `${profileNames[profile]} profile: ${shown} of ${total} positions`
+      : `Profil ${profileNames[profile]} : ${shown} postes sur ${total}`;
+  }
+
+  function syncUrl(profile) {
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('profil');
+      url.searchParams.delete('profile');
+      if (profile !== 'all') url.searchParams.set(profileParam, profile);
+      history.replaceState(null, '', url);
+      // Carry the choice to the other language version.
+      langLinks.forEach(link => {
+        const target = new URL(link.getAttribute('href').split('?')[0], window.location.href);
+        if (profile !== 'all') target.searchParams.set(english ? 'profil' : 'profile', profile);
+        link.setAttribute('href', target.pathname.split('/').pop() + target.search);
+      });
+    } catch { /* URL APIs unavailable: filtering still works. */ }
+  }
+
+  function applyProfile(profile, fromUser) {
+    if (!PROFILES.includes(profile)) profile = 'all';
+    root.dataset.profile = profile;
+    switches.forEach(group => group.querySelectorAll('button').forEach(button => {
+      const checked = button.dataset.profileValue === profile;
+      button.setAttribute('aria-checked', String(checked));
+      button.tabIndex = checked ? 0 : -1;
+    }));
+    if (status) status.textContent = statusText(profile);
+    syncUrl(profile);
+    if (!fromUser) return;
+    try { localStorage.setItem('profile', profile); } catch { /* Choice still works for this visit. */ }
+    if (timeline && !reducedMotion.matches) {
+      timeline.classList.remove('is-refreshing');
+      void timeline.offsetWidth; // restart the arrival animation
+      timeline.classList.add('is-refreshing');
+    }
+    track('profile_switch', { profile });
+  }
+
+  switches.forEach(group => {
+    const buttons = [...group.querySelectorAll('button')];
+    buttons.forEach(button => button.addEventListener('click', () => {
+      if (button.getAttribute('aria-checked') !== 'true') applyProfile(button.dataset.profileValue, true);
+    }));
+    group.addEventListener('keydown', event => {
+      const index = buttons.indexOf(document.activeElement);
+      if (index < 0) return;
+      const moves = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 };
+      let next;
+      if (event.key in moves) next = (index + moves[event.key] + buttons.length) % buttons.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = buttons.length - 1;
+      else return;
+      event.preventDefault();
+      buttons[next].focus();
+      applyProfile(buttons[next].dataset.profileValue, true);
+    });
+  });
+
+  // Inline shortcuts such as "See the Tech profile" under Projects.
+  document.querySelectorAll('[data-profile-set]').forEach(button => button.addEventListener('click', () => {
+    applyProfile(button.dataset.profileSet, true);
+  }));
+
+  if (switches.length) applyProfile(root.dataset.profile, false);
 })();
