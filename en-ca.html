@@ -72,13 +72,19 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-content">
-          <h1 class="hero-title"><span>Lyonnel</span><span class="highlight">Dzotang</span><span>Tchassen</span></h1>
+          <h1 class="hero-title"><span>Lyonnel</span><span><span class="highlight">Dzotang</span> Tchassen</span></h1>
+          <p class="hero-description">People at the heart of action.</p>
           <div class="hero-intro">
-            <p class="hero-subtitle">Senior Consultant at CGI · Québec</p>
-            <p class="hero-description">People at the heart of action.</p>
+            <div class="hero-profile">
+              <p class="hero-lead" id="heroProfileLabel">Explore my profile:</p>
+              <div class="profile-switch profile-switch--hero" role="radiogroup" aria-labelledby="heroProfileLabel"><button type="button" role="radio" data-profile-value="all">All</button><button type="button" role="radio" data-profile-value="tech">Tech</button><button type="button" role="radio" data-profile-value="management">Management</button></div>
+            </div>
+            <p class="hero-focus" data-variant="all">Software design · Cloud · Team leadership</p>
+            <p class="hero-focus" data-variant="tech">Software design · Cloud · AI</p>
+            <p class="hero-focus" data-variant="management">Team leadership · Project management · Change management</p>
             <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary">Explore my projects <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
-              <a href="#contact" class="text-link">Get in touch</a>
+              <a href="#about" class="btn btn-primary">About me <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
+              <a href="#experience" class="btn btn-outline">My career path <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
             </div>
           </div>
         </div>
@@ -87,7 +93,6 @@
           <figcaption><span>Québec, Canada</span><span>Lyonnel D. Tchassen</span></figcaption>
         </figure>
       </div>
-      <div class="hero-foot"><span>Java · Cloud AWS · Software architecture</span><a href="#about">Meet the person <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></div>
     </div>
   </section>
 
@@ -98,64 +103,139 @@
         <div class="about-text">
           <h2 class="section-title">About <span>me</span></h2>
           <p class="section-subtitle">Senior Consultant · CGI, Québec, Canada</p>
-          <p>
-            I am Lyonnel Dzotang Tchassen, a senior developer based in <strong>Québec, Canada</strong>.
-            With a Master's degree in Information Technology from the <strong>University of Douala</strong> and
-            <strong>Oracle</strong> &amp; <strong>AWS</strong> certifications, I have over 11 years of experience
-            designing and building mission-critical information systems.
+          <p data-variant="all tech">
+            I am Lyonnel Dzotang Tchassen, a senior consultant based in <strong>Québec, Canada</strong>.
+            Trained in the MIAGE Master's program at the <strong>University of Douala</strong> and certified in
+            <strong>AWS</strong>, <strong>Oracle</strong>, and <strong>Scrum</strong>, I bring over 11 years of experience
+            designing and delivering information systems for banking and foreign trade.
+          </p>
+          <p data-variant="all tech">
+            At <strong>CGI</strong>, I am Tech Lead of a six-person team in a regulated banking environment.
+            I design <strong>Java</strong> microservices and cloud-native applications on <strong>AWS</strong>,
+            set up <strong>CI/CD</strong> pipelines with GitLab and Terraform, and lead the team's adoption
+            of AI tools.
+          </p>
+          <p data-variant="management">
+            An IT professional based in <strong>Québec, Canada</strong>, I have over 11 years of experience,
+            including more than four in management. My career has taken me from development to management:
+            project coordination, team leadership, and change management.
+          </p>
+          <p data-variant="management">
+            At <strong>GUCE</strong>, a digital transformation platform connected to eight institutional partners,
+            I represented the Technical Directorate on committees, served as technical secretary of the Project
+            Management Office (eight projects), and rolled out <strong>Power BI</strong> for decision-making. At
+            <strong>CGI</strong>, I help standardize banking data and make it traceable. I have led teams of up to
+            eight people and helped users adopt new systems.
           </p>
           <p>
-            Currently a Senior Consultant at <strong>CGI</strong> in Québec, I design
-            microservices architecture, build cloud-native applications on <strong>AWS</strong> (Lambda,
-            SQS, DynamoDB, S3, IAM), implement <strong>CI/CD</strong> pipelines with GitLab and
-            Terraform, and integrate AI tools (GitHub Copilot, ChatGPT) to boost productivity.
-          </p>
-          <p>
-            "People at the heart of business" is a motto that fully reflects my aspirations.
+            "People at the heart of action" is a motto that fully reflects my aspirations.
           </p>
         </div>
         <div class="about-highlights">
-          <div class="highlight-item">
+          <div class="highlight-item" data-variant="all tech">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M9 7V3M15 7V3M9 21v-4M15 21v-4M7 9H3M7 15H3M21 9h-4M21 15h-4"/></svg>
             <div>
               <h3>Architecture Backend & Microservices</h3>
               <p>Design of secure REST APIs with Spring Boot, Java 17, JWT, Spring Security, and microservices architecture</p>
             </div>
           </div>
-          <div class="highlight-item">
+          <div class="highlight-item" data-variant="all tech">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H7a5 5 0 0 1-1-9.9V9a6 6 0 0 1 11.7-2 4.5 4.5 0 0 1-.2 8.9Z"/></svg>
             <div>
               <h3>Cloud AWS & DevOps</h3>
               <p>Cloud-native development with Lambda, SQS, DynamoDB, S3 · GitLab CI/CD · Terraform infrastructure · SonarQube</p>
             </div>
           </div>
-          <div class="highlight-item">
+          <div class="highlight-item" data-variant="tech">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 8.5h18"/><circle cx="6.3" cy="6.25" r="0.6" fill="currentColor" stroke="none"/><circle cx="8.6" cy="6.25" r="0.6" fill="currentColor" stroke="none"/></svg>
             <div>
               <h3>Full-Stack Development</h3>
               <p>From Java Spring Boot on the backend to Angular / AngularJS / Node.js on the frontend</p>
             </div>
           </div>
-          <div class="highlight-item">
+          <div class="highlight-item" data-variant="tech">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
             <div>
               <h3>Mobile Development & Leadership</h3>
               <p>Native Android apps · Team coaching · Code reviews · Technical hiring</p>
             </div>
           </div>
+          <div class="highlight-item" data-variant="all management">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="1.5"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/></svg>
+            <div>
+              <h3>Mandate Management & PMO</h3>
+              <p>Portfolio of eight projects · Budget review and tracking · Committee technical secretariat: risks, minutes, accountability reporting</p>
+            </div>
+          </div>
+          <div class="highlight-item" data-variant="management">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 16v-4M12 16V8M17 16v-7"/></svg>
+            <div>
+              <h3>Data-Driven Steering</h3>
+              <p>Exchange catalog with eight partners · Central registry and traceability in banking · Power BI and lead-time indicators</p>
+            </div>
+          </div>
+          <div class="highlight-item" data-variant="all management">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5M18 20a6 6 0 0 0-3-5.2"/></svg>
+            <div>
+              <h3>Leadership & Team Management</h3>
+              <p>Team of eight: hiring, reviews, work allocation · Tech Lead of a six-person team · Hiring</p>
+            </div>
+          </div>
+          <div class="highlight-item" data-variant="management">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg>
+            <div>
+              <h3>Change Management</h3>
+              <p>User training and support (CAMIS, SYGFR) · Team adoption of AI tools</p>
+            </div>
+          </div>
         </div>
       </div>
       <ul class="profile-facts"><li><strong>11+</strong> years of experience</li><li><strong>15+</strong> projects delivered</li><li><strong>9</strong> certifications</li></ul>
+      <div class="about-contact" id="contact">
+        <div class="about-contact-intro">
+          <h3 class="about-contact-title">Contact me</h3>
+          <p>
+            Have a project, an opportunity, or just want to talk? Write to me, I'll be glad to reply.
+            My detailed résumé is available on request.
+          </p>
+        </div>
+        <div class="about-contact-links">
+          <div class="contact-primary">
+            <a href="mailto:dtlyonnel@gmail.com" class="btn btn-primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              dtlyonnel@gmail.com
+            </a>
+          </div>
+          <div class="contact-secondary">
+            <a href="https://github.com/Coccoonx" target="_blank" rel="noopener" class="contact-link-item">
+              <svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <span>github.com/Coccoonx</span>
+            </a>
+            <a href="https://www.linkedin.com/in/lyonnel-dzotang-tchassen-37bb85104/" target="_blank" rel="noopener" class="contact-link-item">
+              <svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>LinkedIn — Lyonnel Dzotang Tchassen</span>
+            </a>
+            <p class="contact-location">
+              <svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Québec, Québec, Canada</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ========== SKILLS ========== -->
   <section class="section" id="skills">
     <div class="container">
-      <h2 class="section-title">Technical <span>skills</span></h2>
-      <p class="section-subtitle">Technologies and tools I use in projects</p>
+      <h2 class="section-title" data-variant="all">My <span>skills</span></h2>
+      <p class="section-subtitle" data-variant="all">Engineering and management, across projects and roles</p>
+      <h2 class="section-title" data-variant="tech">Technical <span>skills</span></h2>
+      <p class="section-subtitle" data-variant="tech">Technologies and tools I use in projects</p>
+      <h2 class="section-title" data-variant="management">Management <span>skills</span></h2>
+      <p class="section-subtitle" data-variant="management">Management and leadership practices applied across my roles</p>
 
-      <div class="skills-core">
+      <div class="skills-core" data-variant="all tech">
         <p class="skills-core-label">Core stack</p>
         <span class="core-tag">Java 17</span>
         <span class="core-tag">Spring Boot</span>
@@ -164,13 +244,22 @@
         <span class="core-tag">GitLab CI/CD</span>
         <span class="core-tag">Angular</span>
       </div>
+      <div class="skills-core" data-variant="all management">
+        <p class="skills-core-label">Management & leadership</p>
+        <span class="core-tag">Team management</span>
+        <span class="core-tag">Data governance</span>
+        <span class="core-tag">Project management</span>
+        <span class="core-tag">Power BI & KPIs</span>
+        <span class="core-tag">Change management</span>
+        <span class="core-tag">Scrum / Agile</span>
+      </div>
 
       <details class="skills-more">
         <summary>See the full breakdown by area</summary>
 
         <div class="skills-grid">
 
-          <div class="skill-category">
+          <div class="skill-category" data-profiles="tech">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M9 7V3M15 7V3M9 21v-4M15 21v-4M7 9H3M7 15H3M21 9h-4M21 15h-4"/></svg>
               <span class="skill-cat-title">Java & JVM</span>
@@ -189,7 +278,7 @@
             </div>
           </div>
 
-          <div class="skill-category">
+          <div class="skill-category" data-profiles="tech">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 4 12l4 9"/><path d="M16 3l4 9-4 9"/></svg>
               <span class="skill-cat-title">APIs & Services</span>
@@ -209,7 +298,7 @@
             </div>
           </div>
 
-          <div class="skill-category">
+          <div class="skill-category" data-profiles="tech">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H7a5 5 0 0 1-1-9.9V9a6 6 0 0 1 11.7-2 4.5 4.5 0 0 1-.2 8.9Z"/></svg>
               <span class="skill-cat-title">Cloud AWS</span>
@@ -228,7 +317,7 @@
             </div>
           </div>
 
-          <div class="skill-category">
+          <div class="skill-category" data-profiles="tech">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 6.5a5 5 0 0 1 0 10"/><path d="M6.5 6.5a5 5 0 0 0 0 10"/><path d="M6.5 6.5h11M6.5 16.5h11"/></svg>
               <span class="skill-cat-title">DevOps & CI/CD</span>
@@ -246,7 +335,7 @@
             </div>
           </div>
 
-          <div class="skill-category">
+          <div class="skill-category" data-profiles="tech">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="7" ry="2.5"/><path d="M5 5v14c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V5"/><path d="M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg>
               <span class="skill-cat-title">Databases</span>
@@ -264,7 +353,7 @@
             </div>
           </div>
 
-          <div class="skill-category">
+          <div class="skill-category" data-profiles="tech">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 8.5h18"/><circle cx="6.3" cy="6.25" r="0.6" fill="currentColor" stroke="none"/><circle cx="8.6" cy="6.25" r="0.6" fill="currentColor" stroke="none"/></svg>
               <span class="skill-cat-title">Frontend & Web</span>
@@ -281,7 +370,7 @@
             </div>
           </div>
 
-          <div class="skill-category">
+          <div class="skill-category" data-profiles="tech">
             <div class="skill-cat-header">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
               <span class="skill-cat-title">Mobile & Other</span>
@@ -296,6 +385,50 @@
             </div>
           </div>
 
+          <div class="skill-category" data-profiles="management">
+            <div class="skill-cat-header">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 16v-4M12 16V8M17 16v-7"/></svg>
+              <span class="skill-cat-title">Data governance</span>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">Exchange catalog</span>
+              <span class="tag">Data quality</span>
+              <span class="tag">Traceability</span>
+              <span class="tag">Confidentiality</span>
+              <span class="tag">Central registry</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">KPIs</span>
+            </div>
+          </div>
+          <div class="skill-category" data-profiles="management">
+            <div class="skill-cat-header">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="1.5"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/></svg>
+              <span class="skill-cat-title">Project management</span>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">Project portfolio</span>
+              <span class="tag">Budget tracking</span>
+              <span class="tag">Risk matrices</span>
+              <span class="tag">Committees</span>
+              <span class="tag">Accountability reporting</span>
+              <span class="tag">Requirements</span>
+              <span class="tag">PMO</span>
+            </div>
+          </div>
+          <div class="skill-category" data-profiles="management">
+            <div class="skill-cat-header">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5M18 20a6 6 0 0 0-3-5.2"/></svg>
+              <span class="skill-cat-title">Leadership & change</span>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">Team management</span>
+              <span class="tag">Performance reviews</span>
+              <span class="tag">Hiring</span>
+              <span class="tag">User training</span>
+              <span class="tag">AI adoption</span>
+              <span class="tag">SCRUM / Agile</span>
+            </div>
+          </div>
         </div>
       </details>
 
@@ -307,63 +440,63 @@
           <div>
             <p class="credentials-group-title">Certifications</p>
             <div class="cert-list">
-              <div class="cert-item">
+              <div class="cert-item" data-profiles="tech">
                 <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-1.png" alt="AWS Solutions Architect Associate badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>AWS Certified Solutions Architect — Associate</strong>
                   <small>Amazon Web Services · Issued in Oct 2025</small>
                 </div>
               </div>
-              <div class="cert-item">
+              <div class="cert-item" data-profiles="management">
                 <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-2.svg" alt="Google Project Management badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Foundations of Project Management</strong>
                   <small>Google · Issued in Jul 2023</small>
                 </div>
               </div>
-              <div class="cert-item">
+              <div class="cert-item" data-profiles="management">
                 <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-3.svg" alt="ITC Supply Chain Management badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Introduction to Supply Chain Management</strong>
                   <small>ITC SME Trade Academy · Issued in Sep 2020</small>
                 </div>
               </div>
-              <div class="cert-item">
+              <div class="cert-item" data-profiles="management">
                 <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-4.svg" alt="ITC Trade Flows badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>How to Analyse Trade Flows</strong>
                   <small>ITC SME Trade Academy · Issued in Aug 2020</small>
                 </div>
               </div>
-              <div class="cert-item">
+              <div class="cert-item" data-profiles="management">
                 <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-5.svg" alt="ITC Trade Facilitation badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Introduction à l'Accord de l'OMC sur la facilitation des échanges</strong>
                   <small>ITC SME Trade Academy · Issued in Aug 2020</small>
                 </div>
               </div>
-              <div class="cert-item">
+              <div class="cert-item" data-profiles="tech">
                 <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-6.png" alt="AWS Cloud Practitioner badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>AWS Certified Cloud Practitioner</strong>
                   <small>Amazon Web Services · Issued in Jul 2024</small>
                 </div>
               </div>
-              <div class="cert-item">
+              <div class="cert-item" data-profiles="management">
                 <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-7.svg" alt="Scrum Fundamentals badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Scrum Fundamentals Certified</strong>
                   <small>Vabro.ai and VMEdu.com · Issued in Apr 2019</small>
                 </div>
               </div>
-              <div class="cert-item">
+              <div class="cert-item" data-profiles="tech">
                 <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-8.png" alt="Oracle OCP badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Oracle Certified Professional</strong>
                   <small>Java SE 7 Programmer · Oracle · Issued in Jun 2015</small>
                 </div>
               </div>
-              <div class="cert-item">
+              <div class="cert-item" data-profiles="tech">
                 <div class="cert-badge-tile"><img class="cert-badge-img" src="assets/badges/certification-9.png" alt="Oracle OCA badge" loading="lazy" decoding="async" /></div>
                 <div>
                   <strong>Oracle Certified Associate</strong>
@@ -378,14 +511,14 @@
               <div class="cert-item">
                 <div class="cert-badge-tile cert-badge-tile--icon"><svg class="cert-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V6a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v13.5"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 18H20"/><path d="M8 7h8M8 11h6"/></svg></div>
                 <div>
-                  <strong>Master — Information Technology</strong>
-                  <small>University of Douala · Oct 2020 – Apr 2023</small>
+                  <strong>Master's — MIAGE (Computer Methods Applied to Business Management)</strong>
+                  <small>University of Douala · 2020 – 2023 · Thesis: decision-support tool to track the digitization of foreign trade procedures (Power BI, GUCE)</small>
                 </div>
               </div>
               <div class="cert-item">
                 <div class="cert-badge-tile cert-badge-tile--icon"><svg class="cert-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V6a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v13.5"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 18H20"/><path d="M8 7h8M8 11h6"/></svg></div>
                 <div>
-                  <strong>Bachelor — Computer &amp; Information Sciences</strong>
+                  <strong>Bachelor's in Computer Science</strong>
                   <small>University of Dschang · 2010 – 2014</small>
                 </div>
               </div>
@@ -400,122 +533,151 @@
     <div class="container">
       <h2 class="section-title">My <span>experience</span></h2>
       <p class="section-subtitle">Career path since 2014</p>
+      <div class="experience-toolbar">
+        <div class="profile-switch" role="radiogroup" aria-label="Displayed profile"><button type="button" role="radio" data-profile-value="all">All</button><button type="button" role="radio" data-profile-value="tech">Tech</button><button type="button" role="radio" data-profile-value="management">Management</button></div>
+        <p class="profile-status" id="profileStatus" aria-live="polite"></p>
+      </div>
       <div class="timeline">
 
         <!-- CGI -->
-        <div class="timeline-item">
+        <div class="timeline-item" data-profiles="tech management">
           <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-company">CGI</h3>
+              <span class="timeline-badge timeline-badge--profile">Cross-functional</span>
               <span class="timeline-badge timeline-badge--current">Current role</span>
             </div>
-            <h4 class="timeline-role">Senior Consultant</h4>
             <p class="timeline-period">Jun 2024 – Present &nbsp;·&nbsp; Québec, Canada</p>
+            <p class="timeline-context">Senior Consultant · Two engagements in the banking sector</p>
             <ul class="timeline-tasks">
-              <li>Defined microservices architecture, optimized performance, and delivered scalable secure solutions.</li>
-              <li>Developed and maintained Java 17 applications with Spring Boot, JPA/Hibernate, and RESTful APIs.</li>
-              <li>Built and maintained fully cloud-native applications on AWS (Lambda, Step Functions, S3, SQS, DynamoDB, IAM, RDS).</li>
-              <li>Integrated AI tools (GitHub Copilot, ChatGPT) to accelerate coding and generate unit tests.</li>
-              <li>Set up CI/CD pipelines with GitLab and automated AWS deployments via Terraform.</li>
-              <li>Worked in Agile/Scrum teams with product, QA, and DevOps.</li>
-              <li>Mentored developers, organized code reviews, and contributed to technical hiring.</li>
-              <li>Performed static analysis with SonarQube and proactively managed technical debt.</li>
+              <li>Standardized data sent to a central registry to ensure its quality and integrity, in line with regulatory requirements.</li>
+              <li>Implemented traceability of data access and of exchanges between systems, with monitoring inputs for information security teams.</li>
+              <li>Took part in hiring: technical assessment of about ten candidates.</li>
             </ul>
+            <div class="timeline-role-block" data-profiles="tech management">
+              <h4 class="timeline-role">Tech Lead</h4>
+              <p class="timeline-sub-period">Jul 2026 – present · Team of six</p>
+              <ul class="timeline-tasks">
+                <li>Provide technical leadership and support developers on solution design, quality, and evolution.</li>
+                <li>Contribute to architecture decisions with product, QA, and DevOps teams.</li>
+                <li>Lead the team's adoption of AI tools in its daily practices.</li>
+              </ul>
+            </div>
+            <div class="timeline-role-block" data-profiles="tech">
+              <h4 class="timeline-role">Senior Developer</h4>
+              <p class="timeline-sub-period">Jun 2024 – Jun 2026 · Team of five, with technical leadership responsibilities</p>
+              <ul class="timeline-tasks">
+                <li>Designed and built banking applications in Java 17 (Spring Boot, JPA/Hibernate, REST APIs) and on AWS (Lambda, Step Functions, S3, SQS, DynamoDB, IAM, RDS).</li>
+                <li>Microservices architecture, performance optimization, and scalable, secure solutions.</li>
+                <li>CI/CD pipelines with GitLab and automated AWS deployments with Terraform.</li>
+                <li>Code reviews, SonarQube static analysis, and continuous improvement of delivery and quality practices.</li>
+                <li>Integrated AI tools (GitHub Copilot, ChatGPT) to speed up development and generate unit tests.</li>
+              </ul>
+            </div>
             <div class="timeline-tech">
-              <span class="tag">Java 17</span><span class="tag">Spring Boot</span><span class="tag">AWS Lambda</span><span class="tag">SQS</span><span class="tag">DynamoDB</span><span class="tag">Terraform</span><span class="tag">GitLab CI/CD</span><span class="tag">SonarQube</span>
+              <span class="tag">Java 17</span><span class="tag">Spring Boot</span><span class="tag">AWS Lambda</span><span class="tag">SQS</span><span class="tag">DynamoDB</span><span class="tag">Terraform</span><span class="tag">GitLab CI/CD</span><span class="tag">SonarQube</span><span class="tag">Technical leadership</span>
             </div>
           </div>
         </div>
 
         <!-- SERVOO -->
-        <div class="timeline-item">
+        <div class="timeline-item" data-profiles="tech management">
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3 class="timeline-company">SERVICE OPTIMIZATION ORIENTED (SERVOO)</h3>
+              <h3 class="timeline-company">SERVOO SARL</h3>
+              <span class="timeline-badge timeline-badge--profile">Cross-functional</span>
             </div>
-            <h4 class="timeline-role">Senior Developer</h4>
-            <p class="timeline-period">Dec 2020 – May 2024 &nbsp;·&nbsp; 3 years 6 months &nbsp;·&nbsp; Douala V, Cameroon</p>
+            <p class="timeline-period">Dec 2020 – May 2024 &nbsp;·&nbsp; 3 years 6 months &nbsp;·&nbsp; Douala, Cameroon</p>
+            <h4 class="timeline-role">Software Development Consultant (part-time)</h4>
             <ul class="timeline-tasks">
-              <li>API modeling and development.</li>
-              <li>Tool benchmarking and CRUD implementation.</li>
-              <li>Team coaching.</li>
+              <li>Designed and deployed a freight exchange (SYGFR project) and a market price information system (CAMIS project).</li>
+              <li>API modeling and development; tool benchmarking and CRUD implementation.</li>
               <li>Application hosting and monitoring.</li>
+              <li>Trained and supported CAMIS and SYGFR users and coached the teams.</li>
             </ul>
             <div class="timeline-tech">
-              <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">REST API</span><span class="tag">DevOps</span>
+              <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">REST API</span><span class="tag">DevOps</span><span class="tag">User training</span>
             </div>
           </div>
         </div>
 
         <!-- GUCE -->
-        <div class="timeline-item">
+        <div class="timeline-item" data-profiles="tech management">
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3 class="timeline-company">GUCE — Single Window for Foreign Trade Operations</h3>
-            </div>
-            
-
-            <h4 class="timeline-role">Statistical Officer</h4>
-            <p class="timeline-sub-period">Dec 2022 – May 2023 · 6 months · City of Douala</p>
-            <ul class="timeline-tasks">
-              <li>Statistical data analysis and cross-referencing.</li>
-              <li>Designed and implemented operational dashboards.</li>
-              <li>Monitored organizational performance indicators (KPIs).</li>
-            </ul>
-
-            <h4 class="timeline-role" style="margin-top: 1rem;">Project Analyst</h4>
-            <p class="timeline-sub-period">Jun 2020 – Dec 2022 · 2 years 7 months</p>
-            <ul class="timeline-tasks">
-              <li>Analyzed business needs and prepared requirements documentation.</li>
-              <li>Prepared project charters and tracked department tasks/activities.</li>
-              <li>Organized seminars and conferences.</li>
-              <li>Tracked Project Management Office (PMO) activities.</li>
-            </ul>
-
-            <h4 class="timeline-role" style="margin-top: 1rem;">e-GUCE System and Interface Application Manager</h4>
-            <p class="timeline-sub-period">Nov 2019 – Jun 2020 · 8 months</p>
-            <ul class="timeline-tasks">
-              <li>Administered business applications and deployed release artifacts.</li>
-              <li>Tracked monitoring indicators and deployed applications.</li>
-              <li>Provided technical support and optimized application performance.</li>
-            </ul>
-            <div class="timeline-tech">
-              <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Angular</span><span class="tag">REST API</span><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">KPI</span><span class="tag">PMO</span>
+              <h3 class="timeline-company">GUCE-GIE — Single Window for Foreign Trade</h3>
             </div>
             <p class="timeline-period">Aug 2018 – May 2023 &nbsp;·&nbsp; 4 years 10 months &nbsp;·&nbsp; Douala, Cameroon</p>
-
-            <h4 class="timeline-role" style="margin-top: 1rem;">Software Engineer — Integration &amp; APIs</h4>
-            <p class="timeline-sub-period">Aug 2018 – Oct 2019 · 1 year 3 months</p>
-            <ul class="timeline-tasks">
-              <li>Integrated and developed APIs.</li>
-              <li>Implemented workflows for foreign trade operations.</li>
-              <li>Developed mobile applications for Android and iOS.</li>
-            </ul>
+            <p class="timeline-context">Digital transformation platform for foreign trade formalities, connected to eight institutional partners</p>
+            <div class="timeline-role-block" data-profiles="management">
+              <h4 class="timeline-role">Deputy Head, Statistics and Lead Times</h4>
+              <p class="timeline-sub-period">Dec 2022 – May 2023 · 6 months</p>
+              <ul class="timeline-tasks">
+                <li>Assisted the head of department in running the statistics and lead-time monitoring unit.</li>
+                <li>Ran a comparative analysis of business intelligence tools, then rolled out Power BI with two dashboards: border clearance times for goods and customer support request handling times.</li>
+                <li>Defined lead-time performance indicators; the dashboards drove corrective actions and the next targets.</li>
+              </ul>
+            </div>
+            <div class="timeline-role-block" data-profiles="management">
+              <h4 class="timeline-role">Project Analyst, Technical Directorate</h4>
+              <p class="timeline-sub-period">Jun 2020 – Dec 2022 · 2 years 7 months · Technical secretary of the Project Management Office</p>
+              <ul class="timeline-tasks">
+                <li>Represented the Technical Directorate on foreign trade committees.</li>
+                <li>Tracked a portfolio of eight projects and the PMO roadmap.</li>
+                <li>Critically reviewed budgets prepared by project managers before committee approval, then tracked their execution.</li>
+                <li>Prepared committee sessions: dashboards, risk matrices, minutes, and reports.</li>
+                <li>Tracked the Directorate's commitments, analyzed needs, and wrote requirements documents.</li>
+                <li>Handled cross-functional communication between stakeholders; organized seminars and conferences.</li>
+              </ul>
+            </div>
+            <div class="timeline-role-block" data-profiles="tech management">
+              <h4 class="timeline-role">Business Information System Administrator</h4>
+              <p class="timeline-sub-period">Nov 2019 – Jun 2020 · 8 months</p>
+              <ul class="timeline-tasks">
+                <li>Oversaw the application ecosystem and the exchange interfaces with institutional partners.</li>
+                <li>Extended the exchange reference catalog (types, formats, data owners) as new services were integrated.</li>
+                <li>Extracted data for senior management's decisions, ensuring its quality and confidentiality.</li>
+                <li>Monitored availability, deployed releases, and provided second-level support.</li>
+              </ul>
+            </div>
+            <div class="timeline-role-block" data-profiles="tech">
+              <h4 class="timeline-role">Software Engineer, Integration and APIs</h4>
+              <p class="timeline-sub-period">Aug 2018 – Oct 2019 · 1 year 3 months</p>
+              <ul class="timeline-tasks">
+                <li>Developed and integrated services that digitize foreign trade formalities and electronic payment.</li>
+                <li>Implemented workflows for foreign trade operations.</li>
+                <li>Developed mobile applications for Android and iOS.</li>
+              </ul>
+            </div>
+            <div class="timeline-tech">
+              <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Angular</span><span class="tag">REST API</span><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">Power BI</span><span class="tag">KPI</span><span class="tag">PMO</span>
+            </div>
           </div>
         </div>
 
         <!-- MyBonWays -->
-        <div class="timeline-item">
+        <div class="timeline-item" data-profiles="tech management">
           <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-company">MyBonWays SARL</h3>
+              <span class="timeline-badge timeline-badge--profile">Cross-functional</span>
             </div>
-            <h4 class="timeline-role">Technical Manager — Co-founder</h4>
             <p class="timeline-period">Jan 2017 – Aug 2018 &nbsp;·&nbsp; 1 year 8 months &nbsp;·&nbsp; Douala, Cameroon</p>
+            <h4 class="timeline-role">Technical Manager — Co-founder</h4>
             <ul class="timeline-tasks">
-              <li>Application modeling and specific needs analysis.</li>
-              <li>Definition and development of services and APIs.</li>
-              <li>Coached team members and organized delivery.</li>
-              <li>Defined roles and managed software infrastructure.</li>
+              <li>Led a team of eight: five direct reports, one intern, and two external contractors.</li>
+              <li>Managed people (hiring, performance reviews, task allocation) and the technical team's budget.</li>
+              <li>Directed the backend, mobile, and web teams; oversaw platform development, deployment, and administration.</li>
+              <li>Application modeling, needs analysis, and service and API design.</li>
             </ul>
             <div class="timeline-tech">
-              <span class="tag">Java</span><span class="tag">REST API</span><span class="tag">Architecture</span><span class="tag">Leadership</span>
+              <span class="tag">Java</span><span class="tag">REST API</span><span class="tag">Architecture</span><span class="tag">Team management</span><span class="tag">Budget</span>
             </div>
           </div>
         </div>
 
         <!-- WOURI TECHNOLOGIES -->
-        <div class="timeline-item">
+        <div class="timeline-item" data-profiles="tech">
           <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-company">WOURI TECHNOLOGIES Co</h3>
@@ -535,7 +697,7 @@
         </div>
 
         <!-- LRI SARL -->
-        <div class="timeline-item">
+        <div class="timeline-item" data-profiles="tech">
           <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-company">LRI SARL</h3>
@@ -564,7 +726,7 @@
       <div class="projects-grid">
 
         <!-- Namoony -->
-        <div class="project-card">
+        <div class="project-card" data-profiles="tech management">
           <div class="project-header">
             <div class="project-links">
               <a href="https://namoony.lyonneldzotang.com/" target="_blank" rel="noopener" class="project-link" title="Visit Namoony" aria-label="Visit Namoony"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
@@ -579,7 +741,7 @@
         </div>
 
         <!-- Vending Machine -->
-        <div class="project-card">
+        <div class="project-card" data-profiles="tech">
           <div class="project-header">
             <div class="project-links">
               <a href="https://github.com/Coccoonx/vending-machine" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
@@ -606,7 +768,7 @@
         </div>
 
         <!-- QG-Gochiver -->
-        <div class="project-card">
+        <div class="project-card" data-profiles="tech">
           <div class="project-header">
             <div class="project-links">
               <a href="https://github.com/Coccoonx/qg-gochiver" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
@@ -633,7 +795,7 @@
         </div>
 
         <!-- Dashboard -->
-        <div class="project-card">
+        <div class="project-card" data-profiles="tech">
           <div class="project-header">
             <div class="project-links">
               <a href="https://github.com/Coccoonx/dashboard" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
@@ -660,7 +822,7 @@
         </div>
 
         <!-- Gefi -->
-        <div class="project-card">
+        <div class="project-card" data-profiles="tech">
           <div class="project-header">
             <div class="project-links">
               <a href="https://github.com/Coccoonx/gefi" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
@@ -686,7 +848,7 @@
         </div>
 
         <!-- Relieferd -->
-        <div class="project-card">
+        <div class="project-card" data-profiles="tech">
           <div class="project-header">
             <div class="project-links">
               <a href="https://github.com/Coccoonx/relieferd" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
@@ -709,7 +871,7 @@
         </div>
 
         <!-- Cassnaks / Snacks series -->
-        <div class="project-card">
+        <div class="project-card" data-profiles="tech">
           <div class="project-header">
             <div class="project-links">
               <a href="https://github.com/Coccoonx/cassnaks" target="_blank" rel="noopener" class="project-link" title="View repository on GitHub" aria-label="View repository on GitHub"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
@@ -732,62 +894,10 @@
         </div>
 
       </div>
+      <p class="projects-note" data-variant="management">The other projects are engineering work. <button type="button" class="profile-jump" data-profile-set="tech">See the Tech profile</button></p>
     </div>
   </section>
 
-  <!-- ========== CONTACT ========== -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div class="contact-inner">
-        <div class="contact-info">
-          <h2 class="section-title">Contact <span>me</span></h2>
-          <p class="section-subtitle">Let's work together!</p>
-          <p>
-            Do you have a project, an opportunity, or just want to discuss
-            technical topics? Feel free to contact me. I am always
-            open to new collaborations.
-          </p>
-          <div class="contact-primary">
-            <a href="mailto:dtlyonnel@gmail.com" class="btn btn-primary">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              dtlyonnel@gmail.com
-            </a>
-          </div>
-          <div class="contact-secondary">
-            <a href="https://github.com/Coccoonx" target="_blank" rel="noopener" class="contact-link-item">
-              <svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              <span>github.com/Coccoonx</span>
-            </a>
-            <a href="https://www.linkedin.com/in/lyonnel-dzotang-tchassen-37bb85104/" target="_blank" rel="noopener" class="contact-link-item">
-              <svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              <span>LinkedIn — Lyonnel Dzotang Tchassen</span>
-            </a>
-            <p class="contact-location">
-              <svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Québec, Québec, Canada</span>
-            </p>
-          </div>
-        </div>
-        <div class="cv-download">
-          <h3 class="cv-download-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="12" y2="18"/><line x1="15" y1="15" x2="12" y2="18"/></svg>
-            Download my resume
-          </h3>
-          <p class="cv-download-subtitle">Available in two languages — PDF format</p>
-          <div class="cv-download-actions">
-            <a href="https://bit.ly/lead-lyonnel-dzotang-cv-fr" target="_blank" rel="noopener" class="btn btn-primary">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              French CV
-            </a>
-            <a href="https://bit.ly/lead-lyonnel-dzotang-resume-en" target="_blank" rel="noopener" class="btn btn-outline">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              English CV
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   </main>
 
   <!-- ========== FOOTER ========== -->

@@ -18,6 +18,8 @@ A personal portfolio site for Lyonnel Dzotang Tchassen, Senior Consultant, prese
 
 11+ years of full-stack, backend-leaning experience spanning Java/Spring Boot microservices, AWS cloud-native development, DevOps/CI-CD (GitLab, Terraform), and earlier full-stack (AngularJS/Node.js) and native Android work — depth across the whole delivery chain rather than a single narrow specialty.
 
+The site presents two professional profiles, selectable by visitors: **Tech** (engineering, architecture, cloud, DevOps) and **Management** (PMO, project analysis, KPI/dashboards, team coaching and organization, technical hiring), plus an **All** view (default). Several roles are cross-functional and appear in both profiles (CGI, MyBonWays, e-GUCE Application Manager). The profile adapts Hero, About, Skills, Experience and Projects; Management wording is drawn only from real roles and certifications (MyBonWays, GUCE, CGI, Google Project Management, Scrum). Projects are engineering work, so the Management view keeps only Namoony and points to the Tech profile. Next step: task-level detail per experience and profile.
+
 ## Operating Context
 
 - Deployed as a static site via GitHub Pages: https://coccoonx.github.io/lyonneldzotang/
@@ -26,7 +28,8 @@ A personal portfolio site for Lyonnel Dzotang Tchassen, Senior Consultant, prese
 
 ## Capabilities and Constraints
 
-- Sections: Hero, About, Skills, Experience, Projects, Contact — present on both language versions.
+- Sections: Hero, About (ending with Contact), Skills, Experience, Projects — present on both language versions. No CV download links: the detailed CV is available on request.
+- Career facts (titles, dates, team sizes) follow the user's CV (claude.ai artifact "CV — Lyonnel Dzotang Tchassen", Nov 2026). Budget amounts and user counts are deliberately kept off the public site (available in the CV on request).
 - Skills catalogued by category: Java/JVM, APIs & Services, Cloud AWS, plus DevOps/CI-CD and frontend/mobile stacks referenced in About and Projects.
 - Projects section lists real, named repositories and products (e.g. Namoony, Vending Machine API, QG-Gochiver, Dashboard Full-Stack, Gefi, Relieferd, Série Snacks), with year, description, and tech tags. Namoony links to https://namoony.lyonneldzotang.com/; legacy repositories link to https://github.com/Coccoonx.
 - Dark/light theme toggle (localStorage-persisted, OS-preference fallback) and mobile hamburger nav are existing functional requirements, not incidental.
