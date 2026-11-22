@@ -29,7 +29,7 @@ The site presents two professional profiles, selectable by visitors: **Tech** (e
 ## Capabilities and Constraints
 
 - Sections: Hero, About (ending with Contact), Skills, Experience, Projects — present on both language versions. No CV download links: the detailed CV is available on request.
-- Career facts (titles, dates, team sizes, budgets, user counts) follow the user's CV (claude.ai artifact "CV — Lyonnel Dzotang Tchassen", Nov 2026).
+- Career facts (titles, dates, team sizes) follow the user's CV (claude.ai artifact "CV — Lyonnel Dzotang Tchassen", Nov 2026). Budget amounts and user counts are deliberately kept off the public site (available in the CV on request).
 - Skills catalogued by category: Java/JVM, APIs & Services, Cloud AWS, plus DevOps/CI-CD and frontend/mobile stacks referenced in About and Projects.
 - Projects section lists real, named repositories and products (e.g. Namoony, Vending Machine API, QG-Gochiver, Dashboard Full-Stack, Gefi, Relieferd, Série Snacks), with year, description, and tech tags. Namoony links to https://namoony.lyonneldzotang.com/; legacy repositories link to https://github.com/Coccoonx.
 - Dark/light theme toggle (localStorage-persisted, OS-preference fallback) and mobile hamburger nav are existing functional requirements, not incidental.
