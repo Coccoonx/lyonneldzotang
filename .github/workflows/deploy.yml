@@ -1,0 +1,52 @@
+# Redéploie me.lyonneldzotang.com à chaque push sur main.
+#
+# Le site tourne sur le VPS (conteneur nginx personal-branding, derrière le proxy
+# qui détient les ports 80/443). Le workflow ne fait qu'ouvrir une connexion SSH :
+# la clé DEPLOY_SSH_KEY est restreinte côté VPS (authorized_keys :
+# restrict,command="/opt/services/deploy-personal-site.sh"). Quelle que soit la
+# commande demandée, elle ne peut lancer que ce script, qui met à jour le clone
+# du dépôt sur origin/main, reconstruit le conteneur et vérifie la réponse HTTP.
+#
+# Secrets du dépôt :
+#   DEPLOY_SSH_KEY      clé privée ed25519 dédiée à ce workflow
+#   DEPLOY_KNOWN_HOSTS  ligne known_hosts du VPS (ssh-keyscan), pour ne jamais
+#                       accepter une clé d'hôte inconnue
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-me-lyonneldzotang
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Préparer la clé SSH
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+
+      - name: Déployer sur le VPS
+        run: |
+          ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=20 deploy@me.lyonneldzotang.com
+
+      - name: Vérifier le site public
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' https://me.lyonneldzotang.com/)
+          echo "https://me.lyonneldzotang.com/ : HTTP $code"
+          [ "$code" = 200 ]
