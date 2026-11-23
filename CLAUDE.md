@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-Static personal portfolio site for Lyonnel Dzotang Tchassen (Senior IT Developer), deployed via GitHub Pages at https://coccoonx.github.io/lyonneldzotang/. No build system, package manager, or framework — plain HTML5, CSS3, and vanilla JS embedded directly in the HTML pages.
+Static personal portfolio site for Lyonnel Dzotang Tchassen (Senior IT Developer), served at https://me.lyonneldzotang.com/ by an nginx container on a VPS (`Dockerfile`), redeployed automatically on every push to `main` by `.github/workflows/deploy.yml` (SSH key restricted on the VPS to a single deploy script). No build system, package manager, or framework — plain HTML5, CSS3, and vanilla JS embedded directly in the HTML pages.
 
 ## Commands
 

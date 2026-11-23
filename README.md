@@ -4,9 +4,15 @@ Site portfolio personnel de **Lyonnel Dzotang Tchassen** (Senior IT Developer), 
 
 ## Lien d'accès public
 
-- Site web public (GitHub Pages) : **https://coccoonx.github.io/lyonneldzotang/**
-- Version française : **https://coccoonx.github.io/lyonneldzotang/index.html**
-- Version anglaise (Canada) : **https://coccoonx.github.io/lyonneldzotang/en-ca.html**
+- Site web public : **https://me.lyonneldzotang.com/**
+- Version française : **https://me.lyonneldzotang.com/index.html**
+- Version anglaise (Canada) : **https://me.lyonneldzotang.com/en-ca.html**
+
+## Déploiement
+
+Chaque push sur `main` redéploie le site (workflow `.github/workflows/deploy.yml`) : le VPS
+met à jour son clone du dépôt et reconstruit le conteneur nginx (`Dockerfile`). Le workflow
+se relance aussi à la main depuis l'onglet Actions (`workflow_dispatch`).
 
 ## Objectif du site
 
